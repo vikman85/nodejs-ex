@@ -109,6 +109,12 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
+app.get('/test', function (req, res) {
+  // test call for keep alive
+  console.log('test call received');
+  res.render('test.html');
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
